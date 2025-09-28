@@ -1,4 +1,4 @@
-# PDFLayoutAI
+# Ley - PDF Layout Detection Tool
 
 > **AI-powered PDF layout detection and annotation tool**
 

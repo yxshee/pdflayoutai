@@ -1,0 +1,21 @@
+# Core dependencies
+PyMuPDF>=1.23.0
+numpy>=1.21.0
+opencv-python>=4.5.0
+Pillow>=8.0.0
+tqdm>=4.60.0
+
+# AI/ML dependencies
+torch>=1.8.0
+torchvision>=0.9.0
+ultralytics>=8.0.0
+
+# Optional dependencies for specific models
+# paddlepaddle==2.6.0  # Uncomment if using Paddle models
+# paddledet==2.6.0     # Uncomment if using Paddle models
+# cnstd                # Uncomment if using CNSTD models
+
+# Development dependencies (optional)
+# pytest
+# black
+# flake8

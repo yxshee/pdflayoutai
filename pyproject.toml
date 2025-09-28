@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdflayoutai"
+version = "1.0.0"
+description = "AI-powered PDF layout detection and annotation tool"
+readme = "readme.md"
+license = {text = "MIT"}
+authors = [
+    {name = "yxshee", email = "yxshee@example.com"}
+]
+maintainers = [
+    {name = "yxshee", email = "yxshee@example.com"}
+]
+keywords = ["pdf", "layout", "detection", "ai", "yolo", "annotation", "document"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "PyMuPDF>=1.23.0",
+    "tqdm",
+    "opencv-python",
+    "ultralytics",
+    "torch",
+    "torchvision",
+    "numpy",
+    "Pillow",
+]
+
+[project.scripts]
+pdflayoutai = "pdflayoutai.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yxshee/pdflayoutai"
+Repository = "https://github.com/yxshee/pdflayoutai.git"
+Documentation = "https://github.com/yxshee/pdflayoutai/blob/main/readme.md"
+"Bug Tracker" = "https://github.com/yxshee/pdflayoutai/issues"
+
+[tool.setuptools.packages.find]
+include = ["pdflayoutai*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+pdflayoutai = ["models/configs/**/*"]

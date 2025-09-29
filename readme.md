@@ -38,6 +38,48 @@ PDFLayoutAI can identify the following layout elements:
 | **Figure caption** | Captions for figures | Red |
 | **Table caption** | Captions for tables | Green |
 
+## 📂 Project Structure
+
+```text
+.
+├── LICENSE
+├── main.py
+├── processing_summary.md
+├── pyproject.toml
+├── readme.md
+├── requirements.txt
+├── setup.py
+├── output/
+│   └── Workbook_annotated.pdf
+├── pdflayoutai/
+│   ├── __init__.py
+│   ├── cli.py
+│   ├── UniModel.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── baseModel.py
+│   │   ├── cnstdModel.py
+│   │   ├── yolov8.py
+│   │   ├── Paddle/
+│   │   │   ├── __init__.py
+│   │   │   ├── paddle_cdla.py
+│   │   │   └── configs/
+│   │   │       ├── runtime.yml
+│   │   │       └── picodet/legacy_model/...
+│   │   └── weights/
+│   │       ├── yolov8l_doc.onnx
+│   │       └── yolov8m_cdla.pt
+│   └── utils/
+│       ├── __init__.py
+│       ├── DetMetrics.py
+│       ├── instance.py
+│       └── utils.py
+└── source/
+    ├── 1.jpg
+    ├── 2309.12585.pdf
+    └── Workbook.pdf
+```
+
 ## 🛠️ Installation
 
 ### Requirements
@@ -93,7 +135,6 @@ for layer_name in layers:
 | Model | MAP50 | MAP50:95 | Precision | Recall |
 |-------|-------|----------|-----------|--------|
 | **yolov8m_cdla** | 94.36% | 80.86% | 94.49% | 89.80% |
-| **yolov8n_cdla** | - | - | - | - |
 
 ## 🔧 Configuration
 

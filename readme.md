@@ -75,8 +75,6 @@ PDFLayoutAI can identify the following layout elements:
 │       ├── instance.py
 │       └── utils.py
 └── source/
-    ├── 1.jpg
-    ├── 2309.12585.pdf
     └── Workbook.pdf
 ```
 
